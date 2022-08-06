@@ -1,0 +1,265 @@
+
+.actions-columns {
+   display: flex;
+	flex-wrap: wrap;
+}
+
+.actions {
+	margin-bottom: 64px;
+	&-columns-left {
+	   width: 538px;
+	}
+	&-columns-left__title {
+      margin-bottom: 88px; 
+	   padding-top: 24px;
+	   
+      text-align: left;
+	}
+	&-columns-left__info {
+	   width: 340px;
+	   line-height: 36px;
+	}
+}
+
+.actions__wrapper {
+   position: relative;
+	width: 850px;
+	box-sizing: border-box;
+}
+
+.action__input {
+   display: none;
+}
+
+.action__inner {
+   width: 300%;
+}
+
+.action__article {
+   position: relative;
+	float: left;
+	width: calc(100%/3);
+	min-height: 560px;
+
+	background-color: transparent;
+}
+
+.action-card {
+   margin-left: 40px;
+	padding-left: 62px;
+	padding-top: 58px;
+	box-sizing: border-box;
+
+	background-color: #F7F7FA;
+	box-shadow: -40px 40px 0px #515076;
+	&__num {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 62px;
+      height: 62px;
+      box-sizing: border-box;
+
+      font-weight: normal;
+      font-size: 18px;
+
+      border-radius: 50%;
+      background-color: #edecf7; 
+      color: #515076;  
+	}
+}
+
+.action__skin {
+	display: inline-block;
+	padding-left: 6px;
+	padding-top: 8px;
+
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 26px;
+	letter-spacing: 0.17em;
+	text-transform: uppercase;
+	color: #ffffff;
+
+	transform: rotate(270deg);
+	transform-origin: 0 0;
+}
+
+.action-card-columns {
+	display: flex;
+	align-items: center;
+	&__title {
+      width: 337px;
+		margin-bottom: 28px;
+		padding-top: 20px;
+
+		font-weight: 300;
+		font-size: 30px;
+		line-height: 39px;
+      color: #4c5072;  
+	}
+	&__text {
+		width: 430px;
+
+		font-size: 16px;
+		line-height: 32px;
+	}
+	&__foto {
+		display: flex;
+      justify-content: center;
+		align-items: center;
+		width: 296px;
+      height: 401px;
+		margin-left: 20px;
+	}
+}
+
+  /*---- SET UP CONTROL ----*/
+
+.action__slider-prev-next-control {
+	position: absolute;
+	top: 470px;
+	left:  -510px;
+	width: 165px;
+	height: 74px;
+}
+
+.action__slider-prev-next-control label {
+	display: none;
+	box-sizing: border-box;
+	width: 74px;
+	height: 74px;
+
+   color: #ffffff;
+
+	background-color: #515076;
+	border-radius: 50%;
+	opacity: 0.8;
+	transition: 1.5s;
+	cursor: pointer;
+}
+
+.action__slider-prev-next-control label:hover {
+	background-color: #ffffff;
+	transition: 0.3s;
+}
+
+.action_slider-prev-next-control label:active {
+   background-color: #ffffff;
+   transition: 0.3s;
+}
+
+/* Slider Styling */
+
+.action__slider-wrapper {
+   width: 100%;
+   overflow: hidden;
+}
+
+/*---- SET POSITION FOR SLIDE ----*/
+
+#slide1-action:checked ~ .action__slider-prev-next-control label:nth-child(2)::after,
+#slide1-action:checked ~ .action__slider-prev-next-control label:nth-child(3)::after,
+#slide2-action:checked ~ .action__slider-prev-next-control label:nth-child(1)::after,
+#slide2-action:checked ~ .action__slider-prev-next-control label:nth-child(3)::after,
+#slide3-action:checked ~ .action__slider-prev-next-control label:nth-child(2)::after,
+#slide3-action:checked ~ .action__slider-prev-next-control label:nth-child(1)::after {
+	display: block;
+
+	font-family: "FontAwesome";
+	font-size: 45px;
+	line-height: 45px;
+}
+
+/* стрелка вправо */
+
+#slide3-action:checked ~ .action__slider-prev-next-control label:nth-child(1)::after,
+#slide2-action:checked ~ .action__slider-prev-next-control label:nth-child(3)::after,
+#slide1-action:checked ~ .action__slider-prev-next-control label:nth-child(2)::after {
+	content: ">";
+	padding-left: 29px;
+	padding-top: 14px;
+}
+
+#slide3-action:checked ~ .action__slider-prev-next-control label:nth-child(1):hover::after,
+#slide2-action:checked ~ .action__slider-prev-next-control label:nth-child(3):hover::after,
+#slide1-action:checked ~ .action__slider-prev-next-control label:nth-child(2):hover::after {
+	width: 74px;
+	height: 74px;
+   box-sizing: border-box;
+
+   color: #515076;
+	border: 1px solid #515076;
+	border-radius: 50%;
+}
+
+#slide3-action:checked ~ .action__slider-prev-next-control label:nth-child(1):active::after,
+#slide2-action:checked ~ .action__slider-prev-next-control label:nth-child(3):active::after,
+#slide1-action:checked ~ .action__slider-prev-next-control label:nth-child(2):active::after {
+	width: 74px;
+	height: 74px;
+	border-radius: 50%;	
+}
+
+/*cтрелка влево */
+
+#slide1-action:checked ~ .action__slider-prev-next-control label:nth-child(3)::after,
+#slide3-action:checked ~ .action__slider-prev-next-control label:nth-child(2)::after,
+#slide2-action:checked ~ .action__slider-prev-next-control label:nth-child(1)::after {
+   content: "<";
+	padding-left: 20px;
+	padding-top: 14px;
+}
+
+#slide1-action:checked ~ .action__slider-prev-next-control label:nth-child(3):hover::after,
+#slide3-action:checked ~ .action__slider-prev-next-control label:nth-child(2):hover::after,
+#slide2-action:checked ~ .action__slider-prev-next-control label:nth-child(1):hover::after {
+	width: 74px;
+	height: 74px;
+	box-sizing: border-box;
+
+   color: #515076;
+   border: 1px solid #515076;
+	border-radius: 50%;
+}
+
+#slide1-action:checked ~ .action__slider-prev-next-control label:nth-child(3) {
+   opacity: 0.5;
+}
+
+#slide1-action:checked ~ .action__slider-prev-next-control label:nth-child(3):active::after,
+#slide3-action:checked ~ .action__slider-prev-next-control label:nth-child(2):active::after,
+#slide2-action:checked ~ .action__slider-prev-next-control label:nth-child(1):active::after {
+	color: #515076;
+}
+
+/* кнопка вправо отражается*/
+
+#slide3-action:checked ~ .action__slider-prev-next-control label:nth-child(1),
+#slide2-action:checked ~ .action__slider-prev-next-control label:nth-child(3),
+#slide1-action:checked ~ .action__slider-prev-next-control label:nth-child(2) {
+   display: block;
+   float: right;
+}
+
+/*кнопка влево отражается*/
+
+#slide1-action:checked ~ .action__slider-prev-next-control label:nth-child(3),
+#slide3-action:checked ~ .action__slider-prev-next-control label:nth-child(2),
+#slide2-action:checked ~ .action__slider-prev-next-control label:nth-child(1) {
+	display: block;
+	float: left;
+}
+
+#slide1-action:checked ~ .action__slider-wrapper .action__inner {
+   margin-left: 0%;
+}
+  
+#slide2-action:checked ~ .action__slider-wrapper .action__inner {
+   margin-left: -100%;
+}
+
+#slide3-action:checked ~ .action__slider-wrapper .action__inner {
+   margin-left: -200%;
+}
+

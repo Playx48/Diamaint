@@ -1,0 +1,126 @@
+
+.authors {
+   margin-top: 109px;
+   margin-bottom: 20px;
+
+   background-image: url("../img/authors-bg@1x.png");
+   background-repeat: no-repeat;
+   background-position: 500px 0;
+}
+
+.authors-columns__info {
+   width: 698px;
+   margin-right: 100px;
+}
+
+.authors__wrapper {
+   position: relative;
+   width: 603px;
+}
+
+.author__input {
+   display: none;
+}
+
+.author__inner {
+   width: 300%;
+}
+
+.author__article {
+   position: relative;
+   width: calc(100%/3);
+   height: 671px;
+   float: left;
+}
+
+.author {
+   padding-top: 113px;
+}
+
+.authors-columns {
+   display: flex;
+   flex-wrap: wrap;
+   &__title {
+      margin-bottom: 42px;
+      padding-left: 10px;
+      text-align: left;
+   }
+   &__name {
+      margin-bottom: 16px;
+      padding-left: 10px;
+
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 40px;
+      color: #515076;
+   }
+   &__text {
+      margin-bottom: 42px;
+      padding-left: 10px;
+
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 29px;
+      color: #888794;
+   }
+   &__quote {
+      display: inline-block;
+      width: 554px;
+      padding-left: 70px;
+
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 29px;
+      color: #888794;
+   }
+}
+
+.author__slider-wrapper {
+   width: 100%;
+   overflow: hidden;
+}
+
+.author__slider-dot-control {
+   position: absolute;
+   display: flex;
+   justify-content: space-between;
+   top: 607px;
+   left: -788px;
+   width: 620px;
+}
+
+.author__slider-dot-control label {
+   display: inline-block;
+   width: 153px;
+   height: 173px;
+   margin-right: 33px;
+
+   transition: all 0.3s;
+   opacity: 0.8;
+   cursor: pointer;
+}
+
+.author__slider-dot-control label:hover {
+   opacity: 0.8;
+}
+
+/* доты подсветка */
+
+#slide3:checked ~ .author__slider-dot-control label:nth-child(3), 
+#slide2:checked ~ .author__slider-dot-control label:nth-child(2), 
+#slide1:checked ~ .author__slider-dot-control label:nth-child(1) {
+   opacity: 1;
+}
+
+#slide1:checked ~ .author__slider-wrapper .author__inner {
+   margin-left: 0%;
+}
+
+#slide2:checked ~ .author__slider-wrapper .author__inner {
+   margin-left: -100%;
+}
+
+#slide3:checked ~ .author__slider-wrapper .author__inner {
+   margin-left: -200%;
+}
+
